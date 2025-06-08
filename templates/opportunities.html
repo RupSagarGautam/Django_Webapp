@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunities - Shikshya Sathi Gurukul</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/opportunities.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    {% extends 'base.html'%}
+    {% block content %}
+    <main class="opportunities-main">
+        <!-- Hero Section -->
+        <section class="opportunities-hero">
+            <div class="hero-content">
+                <h1>Career Opportunities</h1>
+                <p>Discover exciting career paths and internship opportunities to kickstart your professional journey</p>
+            </div>
+        </section>
+
+        <!-- Job Categories -->
+        <section class="job-categories">
+            <div class="container">
+                <h2>Explore Opportunities</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="card-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Technology</h3>
+                        <p>Software Development, IT Support, Data Analysis</p>
+                        <span class="job-count">15 Positions</span>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Business</h3>
+                        <p>Marketing, Finance, Business Development</p>
+                        <span class="job-count">12 Positions</span>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="card-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>Education</h3>
+                        <p>Teaching, Content Creation, Course Development</p>
+                        <span class="job-count">8 Positions</span>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="card-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Design</h3>
+                        <p>UI/UX Design, Graphic Design, Web Design</p>
+                        <span class="job-count">6 Positions</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Opportunities -->
+        <section class="featured-opportunities">
+            <div class="container">
+                <h2>Featured Positions</h2>
+                <div class="opportunities-grid">
+                    <div class="opportunity-card">
+                        <div class="opportunity-header">
+                            <i class="fas fa-code"></i>
+                            <span class="badge">Full-time</span>
+                        </div>
+                        <h3>Senior Software Developer</h3>
+                        <p class="company">Tech Solutions Inc.</p>
+                        <ul class="requirements">
+                            <li><i class="fas fa-check"></i> 5+ years experience</li>
+                            <li><i class="fas fa-check"></i> JavaScript, React, Node.js</li>
+                            <li><i class="fas fa-check"></i> Team leadership</li>
+                        </ul>
+                        <button class="apply-btn">Apply Now</button>
+                    </div>
+
+                    <div class="opportunity-card">
+                        <div class="opportunity-header">
+                            <i class="fas fa-chart-bar"></i>
+                            <span class="badge">Internship</span>
+                        </div>
+                        <h3>Marketing Intern</h3>
+                        <p class="company">Global Marketing Agency</p>
+                        <ul class="requirements">
+                            <li><i class="fas fa-check"></i> Current student</li>
+                            <li><i class="fas fa-check"></i> Social media skills</li>
+                            <li><i class="fas fa-check"></i> Creative mindset</li>
+                        </ul>
+                        <button class="apply-btn">Apply Now</button>
+                    </div>
+
+                    <div class="opportunity-card">
+                        <div class="opportunity-header">
+                            <i class="fas fa-paint-brush"></i>
+                            <span class="badge">Contract</span>
+                        </div>
+                        <h3>UI/UX Designer</h3>
+                        <p class="company">Design Studio</p>
+                        <ul class="requirements">
+                            <li><i class="fas fa-check"></i> 3+ years experience</li>
+                            <li><i class="fas fa-check"></i> Figma, Adobe XD</li>
+                            <li><i class="fas fa-check"></i> Portfolio required</li>
+                        </ul>
+                        <button class="apply-btn">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Resources -->
+        <section class="career-resources">
+            <div class="container">
+                <h2>Career Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Resume Writing</h3>
+                        <p>Learn how to create a compelling resume that stands out</p>
+                        <a href="#" class="resource-link">Learn More</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Interview Tips</h3>
+                        <p>Prepare for interviews with expert guidance</p>
+                        <a href="#" class="resource-link">Learn More</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Career Planning</h3>
+                        <p>Map out your career path with professional advice</p>
+                        <a href="#" class="resource-link">Learn More</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Networking</h3>
+                        <p>Build professional connections and expand your network</p>
+                        <a href="#" class="resource-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="opportunities-newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to receive the latest job opportunities and career tips</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section (Same as index.html) -->
+    <footer class="footer">
+        <!-- Copy the footer content from index.html -->
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Newsletter form submission
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const button = this.querySelector('button');
+            const input = this.querySelector('input');
+            const originalText = button.innerHTML;
+            
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+            
+            setTimeout(() => {
+                button.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+                input.value = '';
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                }, 3000);
+            }, 1500);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user is logged in
+            const userData = JSON.parse(localStorage.getItem('userData'));
+            const userMenu = document.querySelector('.user-menu');
+            
+            if (userData) {
+                userMenu.style.display = 'block';
+            }
+
+            // Handle logout
+            document.getElementById('logoutBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                fetch('http://127.0.0.1:8000/api/auth/logout/', {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Clear user data from localStorage
+                        localStorage.removeItem('userData');
+                        // Redirect to auth page
+                        window.location.href = 'auth.html';
+                    } else {
+                        throw new Error('Logout failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Even if the server request fails, clear local data and redirect
+                    localStorage.removeItem('userData');
+                    window.location.href = 'auth.html';
+                });
+            });
+        });
+    </script>
+
+    <style>
+        /* User Menu Styles */
+        .user-menu {
+            position: relative;
+        }
+
+        .user-icon {
+            font-size: 1.5em;
+            color: var(--secondary-color);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .user-icon:hover {
+            color: var(--primary-color);
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            min-width: 200px;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .user-menu:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: var(--light-bg);
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .dropdown-menu a i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .dropdown-menu a:last-child {
+            color: var(--accent-color);
+        }
+
+        .dropdown-menu a:last-child:hover {
+            background-color: #fee2e2;
+        }
+
+        
+
+        /* Rest of your existing styles */
+    </style>
+    {% endblock %}
+</body>
+</html>

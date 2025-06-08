@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Shikshya Sathi Gurukul</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    {%include 'header.html'%}
+
+    <!-- Main Content -->
+    <main class="profile-main">
+        <div class="profile-container">
+            <!-- Sidebar -->
+            <aside class="profile-sidebar">
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h2 id="profileUsername">Loading...</h2>
+                    <p id="profileEmail">Loading...</p>
+                </div>
+                <nav class="profile-nav">
+                    <ul>
+                        <li class="active"><a href="#dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
+                        <li><a href="#my-courses"><i class="fas fa-book"></i> My Courses</a></li>
+                        <li><a href="#progress"><i class="fas fa-chart-line"></i> Progress</a></li>
+                        <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li><a href="#help"><i class="fas fa-question-circle"></i> Help</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content Area -->
+            <section class="profile-content">
+                <!-- Dashboard Section -->
+                <div class="content-section active" id="dashboard">
+                    <h2>Welcome Back!</h2>
+                    <div class="dashboard-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-book"></i>
+                            <div class="stat-info">
+                                <h3>Enrolled Courses</h3>
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-clock"></i>
+                            <div class="stat-info">
+                                <h3>Study Hours</h3>
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-certificate"></i>
+                            <div class="stat-info">
+                                <h3>Certificates</h3>
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-star"></i>
+                            <div class="stat-info">
+                                <h3>Achievement Points</h3>
+                                <p>0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recent-activity">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-list">
+                            <p class="no-activity">No recent activity</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Courses Section -->
+                <div class="content-section" id="my-courses">
+                    <h2>My Courses</h2>
+                    <div class="courses-grid">
+                        <p class="no-courses">You haven't enrolled in any courses yet.</p>
+                    </div>
+                </div>
+
+                <!-- Progress Section -->
+                <div class="content-section" id="progress">
+                    <h2>Learning Progress</h2>
+                    <div class="progress-overview">
+                        <div class="progress-chart">
+                            <canvas id="progressChart"></canvas>
+                        </div>
+                        <div class="progress-stats">
+                            <div class="progress-stat">
+                                <h3>Overall Progress</h3>
+                                <p>0%</p>
+                            </div>
+                            <div class="progress-stat">
+                                <h3>Completed Lessons</h3>
+                                <p>0/0</p>
+                            </div>
+                            <div class="progress-stat">
+                                <h3>Quiz Scores</h3>
+                                <p>0%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Section -->
+                <div class="content-section" id="settings">
+                    <h2>Account Settings</h2>
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password" name="current-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password" name="new-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm New Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password">
+                        </div>
+                        <button type="submit" class="update-btn">Update Password</button>
+                    </form>
+                </div>
+
+                <!-- Help Section -->
+                <div class="content-section" id="help">
+                    <h2>Help & Support</h2>
+                    <div class="help-content">
+                        <div class="help-section">
+                            <h3>Frequently Asked Questions</h3>
+                            <div class="faq-list">
+                                <div class="faq-item">
+                                    <h4>How do I enroll in a course?</h4>
+                                    <p>Browse our course catalog and click on the "Enroll" button for your desired course.</p>
+                                </div>
+                                <div class="faq-item">
+                                    <h4>How do I track my progress?</h4>
+                                    <p>Visit the Progress section in your profile to view your learning statistics.</p>
+                                </div>
+                                <div class="faq-item">
+                                    <h4>How do I contact support?</h4>
+                                    <p>You can reach our support team through the Contact page or email us at support@elearning.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="help-section">
+                            <h3>Contact Support</h3>
+                            <form class="support-form">
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" name="subject" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/code/js/profile.js"></script>
+     {%include 'footer.html'%}
+</body>
+</html> 

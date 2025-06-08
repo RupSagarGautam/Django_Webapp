@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Shikshya Sathi Gurukul</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/research.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* User Menu Styles */
+        .user-menu {
+            position: relative;
+        }
+
+        .user-icon {
+            font-size: 1.5em;
+            color: var(--secondary-color);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .user-icon:hover {
+            color: var(--primary-color);
+            transition: none;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            min-width: 200px;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .user-menu:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            background-color: aliceblue;
+        }
+
+        .dropdown-menu a {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: var(--light-bg);
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .dropdown-menu a i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .dropdown-menu a:last-child {
+            color: var(--accent-color);
+        }
+
+        .dropdown-menu a:last-child:hover {
+            background-color: #fee2e2;
+        }
+
+        .category-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .category-link i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .category-link:hover {
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+
+        .category-link:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Rest of your existing styles */
+    </style>
+</head>
+<body>
+    {%include 'header.html'%}
+
+    <main class="research-main">
+        <!-- Hero Section -->
+        <section class="research-hero">
+            <div class="hero-content">
+                <h1>Research & Innovation</h1>
+                <p>Explore cutting-edge research methodologies and resources to enhance your academic journey</p>
+            </div>
+        </section>
+
+        <!-- Research Categories -->
+        <section class="research-categories">
+            <div class="container">
+                <h2>Research Areas</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="card-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>Scientific Research</h3>
+                        <p>Explore scientific methodologies and laboratory research techniques</p>
+                        <a href="#" class="category-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3>Data Analysis</h3>
+                        <p>Master statistical analysis and data interpretation skills</p>
+                        <a href="#" class="category-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="card-icon">
+                            <i class="fas fa-book-reader"></i>
+                        </div>
+                        <h3>Literature Review</h3>
+                        <p>Learn effective literature review and academic writing techniques</p>
+                        <a href="#" class="category-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="card-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Experimental Design</h3>
+                        <p>Design and conduct effective research experiments</p>
+                        <a href="#" class="category-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Resources -->
+        <section class="featured-resources">
+            <div class="container">
+                <h2>Featured Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <img src="https://img.freepik.com/free-vector/folder-with-magnifying-glass-landing-page_23-2148284731.jpg" alt="Research Papers">
+                        <div class="resource-content">
+                            <h3>Research Papers</h3>
+                            <p>Access our collection of peer-reviewed research papers</p>
+                            <button class="resource-btn">Access Papers</button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <img src="https://img.freepik.com/free-vector/hand-drawn-essay-illustration_23-2150268421.jpg" alt="Research Tools">
+                        <div class="resource-content">
+                            <h3>Research Tools</h3>
+                            <p>Discover tools and software for research analysis</p>
+                            <button class="resource-btn">Explore Tools</button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <img src="https://img.freepik.com/free-vector/online-article-concept-illustration_114360-5193.jpg" alt="Research Guides">
+                        <div class="resource-content">
+                            <h3>Research Guides</h3>
+                            <p>Step-by-step guides for conducting research</p>
+                            <button class="resource-btn">View Guides</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Support -->
+        <section class="research-support">
+            <div class="container">
+                <h2>Research Support</h2>
+                <div class="support-grid">
+                    <div class="support-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Mentorship</h3>
+                        <p>Get guidance from experienced research mentors</p>
+                    </div>
+
+                    <div class="support-card">
+                        <i class="fas fa-comments"></i>
+                        <h3>Discussion Forums</h3>
+                        <p>Engage in research discussions with peers</p>
+                    </div>
+
+                    <div class="support-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Workshops</h3>
+                        <p>Attend research methodology workshops</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {%include 'footer.html'%}
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user is logged in
+            const userData = JSON.parse(localStorage.getItem('userData'));
+            const userMenu = document.querySelector('.user-menu');
+            
+            if (userData) {
+                userMenu.style.display = 'block';
+            }
+
+            // Handle logout
+            document.getElementById('logoutBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                fetch('http://127.0.0.1:8000/api/auth/logout/', {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Clear user data from localStorage
+                        localStorage.removeItem('userData');
+                        // Redirect to auth page
+                        window.location.href = 'auth.html';
+                    } else {
+                        throw new Error('Logout failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Even if the server request fails, clear local data and redirect
+                    localStorage.removeItem('userData');
+                    window.location.href = 'auth.html';
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

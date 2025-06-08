@@ -1,0 +1,55 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shikshya Sathi Gurukul - Modern Education Platform</title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="margin-top: 80px; padding: 0;">
+
+    <!-- Header Section -->
+<div class="headertop">
+        <div class="topheader">
+            <div class="contacts">
+                <span class="contact-name"><i class="fas fa-graduation-cap"></i> ShikshyaSathiGurukul</span>
+                <span class="contact-number"><i class="fas fa-phone"></i> +977-984321234</span>
+                <span class="contact-email"><i class="fas fa-envelope"></i> ShikshyaSathi@gurukul.edu.np</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="headersecond">
+        <div class="secondheader">
+            <div class="left">
+                <img src="/static/Image/Logo.png" alt="Shikshya Sathi Gurukul Logo">
+                <h2>Shikshya Sathi Gurukul</h2>
+            </div>
+    
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+    
+            <nav class="right" id="nav-menu">
+                <ul>
+                    <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="/home#Learn"><i class="fas fa-book"></i> Learn</a></li>
+                    <li><a href="/home#Contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="/home#AboutUs"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li id="manageCourseLink" "><a href=" {% url "courseManagement" %} "><i class="fas fa-chalkboard-teacher"></i> Manage Course</a></li>
+                    <li class="user-menu" style="display: none;">
+                        <a href="#" class="user-icon"><i class="fas fa-user-circle"></i></a>
+                        <div class="dropdown-menu">
+                            <a href=" {% url "profile" %} "><i class="fas fa-user"></i> Dashboard</a>
+                            <a href="courses.html"><i class="fas fa-book"></i> My Courses</a>
+                            <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div> 
+    </header>

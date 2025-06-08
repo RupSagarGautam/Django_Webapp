@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup - Shikshya Sathi Gurukul</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/auth.css">
+</head>
+<body>
+
+
+    <main class="auth-main">
+        
+        <div class="auth-container">
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="signup">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form active">
+                <h2>Welcome Back!</h2>
+                <div class="form-group">
+                    <label for="loginUsername">Username</label>
+                    <input type="text" id="loginUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="auth-btn">Login</button>
+                <div id="loginError" class="error-message"></div>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="auth-form">
+                <h2>Create Account</h2>
+                <div class="form-group">
+                    <label for="signupUsername">Username</label>
+                    <input type="text" id="signupUsername" required minlength="3" maxlength="30" pattern="[a-zA-Z0-9_]+" title="Username can only contain letters, numbers, and underscores">
+                    <small class="form-text">3-30 characters, letters, numbers, and underscores only</small>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required minlength="8" 
+                           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                           title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number">
+                    <small class="form-text">Minimum 8 characters, at least one uppercase letter, one lowercase letter, and one number</small>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                    <small class="form-text">Please confirm your password</small>
+                </div>
+                <button type="submit" class="auth-btn">Sign Up</button>
+                <div id="signupError" class="error-message"></div>
+            </form>
+        </div>
+        
+    </main>
+
+    <script src="/static/js/auth.js"></script>
+
+</body>
+</html> 
+{% endblock %}

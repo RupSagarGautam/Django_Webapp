@@ -1,0 +1,237 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load static %}
+
+
+    <main class="body">
+        <section class="Home" id="Home"> 
+        <div class="bodyheading">
+                Where Educators Meet Excellence
+        </div>
+        <div class="videos">
+            <div class="thumbnails">
+                <div class="photos">
+                        <img src="/static/Image/Thinking_man.png" alt="Student thinking about their academic future">
+                </div>
+                <div class="text">
+                        <h3>Confused About Your Academic Future?</h3>
+                        <p>Shikshya Sathi Gurukul is here to guide you through your educational journey with personalized learning paths and expert mentorship.</p>
+                        <button class="learn-more-btn">
+                            <a href="/home#Learn">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </button>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Learn" id="Learn">
+        <div class="secondpage">
+                <h2>LEARN AS YOU CHOOSE</h2>
+            <div class="threesection">
+                <div class="research">
+                        <i class="fas fa-search fa-3x"></i>
+                        <h3>RESEARCH</h3>
+                        <hr>
+                        <img src="/static/Image/Researching_Male.png" alt="Student conducting research">
+                        <p>Our research team is dedicated to providing you with cutting-edge resources and methodologies to excel in your academics.</p>
+                        <a href="/research" class="learn-more-btn">Explore Research <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="learn">
+                        <i class="fas fa-graduation-cap fa-3x"></i>
+                        <h3>LEARN</h3>
+                        <hr>
+                        <img src="/static/Image/Learning_lady.png" alt="Student learning online">
+                        <p>Experience personalized learning journeys with our comprehensive resources and interactive study materials.</p>
+                        <a href="/learning" class="learn-more-btn">Start Learning <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="earn">
+                        <i class="fas fa-chart-line fa-3x"></i>
+                        <h3>EARN</h3>
+                        <hr>
+                        <img src="/static/Image/Earn.png" alt="Professional growth">
+                        <p>Transform your knowledge into opportunities with our expert positions and internship programs.</p>
+                        <a href="/opportunities" class="learn-more-btn">View Opportunities <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Contact Section -->
+        <section id="Contact" class="contact-section">
+            <div class="section-container">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Get in touch with us for any questions or inquiries</p>
+                
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Our Location</h3>
+                            <p>123 Education Street</p>
+                            <p>Kathmandu, Nepal</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <i class="fas fa-phone-alt"></i>
+                            <h3>Phone Number</h3>
+                            <p>+977-984321234</p>
+                            <p>+977-984321235</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email Address</h3>
+                            <p>ShikshyaSathi@gurukul.edu.np</p>
+                            <p>info@gurukul.edu.np</p>
+                        </div>
+
+                        <div class="info-card">
+                            <i class="fas fa-clock"></i>
+                            <h3>Working Hours</h3>
+                            <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                            <p>Saturday: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                            </div>
+
+                <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Enter message subject">
+                </div>
+
+                <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Type your message here"></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-button">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Map Section -->
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.31397712412!2d85.3261328!3d27.7172453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600%2C%20Nepal!5e0!3m2!1sen!2s!4v1708601234567!5m2!1sen!2s" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+        </div>
+    </section>
+
+    <section class="AboutUs" id="AboutUs">
+        <div class="aboutuscontainer">
+                <div class="aboutus-content-wrapper">
+                    <div class="aboutus-header">
+                        <span class="section-badge">About Us</span>
+                        <h2>Empowering Education Through Innovation</h2>
+                        <p class="aboutus-subtitle">Shikshya Sathi Gurukul is a leading online educational institution dedicated to providing quality learning experiences to students worldwide.</p>
+                    </div>
+
+                    <div class="aboutus-grid">
+                        <div class="aboutus-card">
+                            <div class="card-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Our Mission</h3>
+                            <p>To provide accessible, high-quality education that empowers students to achieve their academic and professional goals through innovative learning methodologies.</p>
+                        </div>
+
+                        <div class="aboutus-card">
+                            <div class="card-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3>Our Vision</h3>
+                            <p>To become the leading global platform for transformative education, fostering a community of lifelong learners and future leaders.</p>
+                        </div>
+
+                        <div class="aboutus-card">
+                            <div class="card-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Our Impact</h3>
+                            <p>Empowering thousands of students with quality education, professional development, and career advancement opportunities.</p>
+                        </div>
+
+                        <div class="aboutus-card">
+                            <div class="card-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Our Community</h3>
+                            <p>Building a diverse, inclusive learning environment where students and educators collaborate to achieve excellence.</p>
+                        </div>
+                    </div>
+
+                    <div class="aboutus-features">
+                        <h3>Why Choose Us?</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Expert-led courses and training programs</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Interactive learning methodologies</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Industry-relevant curriculum</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Flexible learning schedules</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Personalized learning paths</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Career guidance and support</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="aboutus-cta">
+                        <h3>Ready to Start Your Learning Journey?</h3>
+                        <p>Join thousands of students who are already transforming their lives through education.</p>
+                        <button class="cta-button" onclick="window.location.href='#Learn'">
+                            <span>Get Started Today</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     
+
+    <script src="/static/js/script.js"></script>
+
+{% endblock %}
+    
+</body>
+</html>
