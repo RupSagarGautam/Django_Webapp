@@ -21,3 +21,6 @@ def profile(request):
 
 def research(request):
     return render(request, 'research.html')
+
+
+

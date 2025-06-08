@@ -12,6 +12,8 @@
 </head>
 <body>
     {% include 'header.html' %}
+    {% block content%}
+    
 
     <main class="course-management-main">
         <div class="container">
@@ -147,6 +149,6 @@
     {% include 'footer.html' %}
 
     <script src="/static/js/course-management.js"></script>
-    
+    {% endblock%}
 </body>
 </html> 

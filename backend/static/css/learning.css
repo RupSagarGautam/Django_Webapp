@@ -1,4 +1,8 @@
 /* Learning Page Styles */
+body{
+    margin: 0;
+    padding: 0;
+}
 .learning-main {
     padding-top: 80px;
 }

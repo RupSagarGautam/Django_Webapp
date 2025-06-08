@@ -20,11 +20,11 @@ from django.urls import path
 from backend import views
 
 urlpatterns = [
-    path('', lambda request: redirect('home/')),
-    path('home/', views.homePage, name='home'),
+    path('', lambda request: redirect('home/'), name='index'),
+    path('home/', views.homePage, name='index'),
     path('admin/', admin.site.urls),
     path('auth/', views.auth, name='auth'),
-    path('course-management/', views.courseManagement, name='course_management'),
+    path('course-management/', views.courseManagement, name='courseManagement'),
     path('learning/', views.learning, name='learning'),
     path('opportunities/', views.opportunities, name='opportunities'),
     path('profile/', views.profile, name='profile'),

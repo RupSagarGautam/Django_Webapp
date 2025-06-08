@@ -1,14 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shikshya Sathi Gurukul - Modern Education Platform</title>
-    <link rel="stylesheet" href="{% static '/css/style.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-{% include 'header.html' %}
+
 
     <main class="body">
         <section class="Home" id="Home"> 
@@ -24,7 +18,7 @@
                         <h3>Confused About Your Academic Future?</h3>
                         <p>Shikshya Sathi Gurukul is here to guide you through your educational journey with personalized learning paths and expert mentorship.</p>
                         <button class="learn-more-btn">
-                            <a href="#Learn">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <a href="/home#Learn">Learn More <i class="fas fa-arrow-right"></i></a>
                         </button>
                     </div>
             </div>
@@ -41,7 +35,7 @@
                         <hr>
                         <img src="/static/Image/Researching_Male.png" alt="Student conducting research">
                         <p>Our research team is dedicated to providing you with cutting-edge resources and methodologies to excel in your academics.</p>
-                        <a href="/templates/research.html" class="learn-more-btn">Explore Research <i class="fas fa-arrow-right"></i></a>
+                        <a href="/research" class="learn-more-btn">Explore Research <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="learn">
                         <i class="fas fa-graduation-cap fa-3x"></i>
@@ -49,7 +43,7 @@
                         <hr>
                         <img src="/static/Image/Learning_lady.png" alt="Student learning online">
                         <p>Experience personalized learning journeys with our comprehensive resources and interactive study materials.</p>
-                        <a href="/Code/html/learning.html" class="learn-more-btn">Start Learning <i class="fas fa-arrow-right"></i></a>
+                        <a href="/learning" class="learn-more-btn">Start Learning <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="earn">
                         <i class="fas fa-chart-line fa-3x"></i>
@@ -57,7 +51,7 @@
                         <hr>
                         <img src="/static/Image/Earn.png" alt="Professional growth">
                         <p>Transform your knowledge into opportunities with our expert positions and internship programs.</p>
-                        <a href="/Code/html/opportunities.html" class="learn-more-btn">View Opportunities <i class="fas fa-arrow-right"></i></a>
+                        <a href="/opportunities" class="learn-more-btn">View Opportunities <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -233,11 +227,11 @@
         </section>
     </main>
 
-    
+     
 
     <script src="/static/js/script.js"></script>
-   
-{% include 'footer.html' %}
+
+{% endblock %}
     
 </body>
 </html>

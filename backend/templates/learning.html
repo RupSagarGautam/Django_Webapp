@@ -7,13 +7,28 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/learning.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .learning-header {
+            background-color: #f8f9fa;
+            padding: 50px;
+            text-align: center;
+            font-size: 44px;
+            color: #343a40;
+            background-color:rgba(182, 189, 196, 0.21);
+            filter: blur(0.5px);
+        }
+    </style>    
 </head>
 <body>
-    <!-- Header Section (Same as index.html) -->
-    {% include 'header.html'%}
-
+    {% extends 'base.html'%}
+    {% block content %}
+    <div class="learning-header">
+      <h2>  YOUR FUTURE IS HERE </h2>
+    </div>
+ 
     <main class="learning-main">
         <!-- Hero Section -->
+       
         <section class="learning-hero">
             <div class="hero-content">
                 <h1>Start Your Learning Journey</h1>
@@ -142,9 +157,9 @@
         </div>
     </div>
 
-    {% include 'footer.html' %}
+
 
     <script src="/static/js/learning.js"></script>
-        
+{% endblock %}
 </body>
 </html> 

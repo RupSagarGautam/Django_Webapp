@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+{%load static%}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +12,10 @@
     <link rel="stylesheet" href="/static/css/auth.css">
 </head>
 <body>
+
+
     <main class="auth-main">
+        
         <div class="auth-container">
             <div class="auth-tabs">
                 <button class="tab-btn active" data-tab="login">Login</button>
@@ -59,8 +65,11 @@
                 <div id="signupError" class="error-message"></div>
             </form>
         </div>
+        
     </main>
 
     <script src="/static/js/auth.js"></script>
+
 </body>
 </html> 
+{% endblock %}

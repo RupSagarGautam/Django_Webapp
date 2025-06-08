@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    {% include 'header.html' %}
-
+    {% extends 'base.html'%}
+    {% block content %}
     <main class="opportunities-main">
         <!-- Hero Section -->
         <section class="opportunities-hero">
@@ -316,6 +316,6 @@
 
         /* Rest of your existing styles */
     </style>
-    {% include 'footer.html' %}
+    {% endblock %}
 </body>
 </html>
