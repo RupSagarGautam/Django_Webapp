@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+    
+{% block content %}
+<style>
+.col-12{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+</style>
+<div class="user-form-container" style="margin-top: 90px; padding: 0px;">
+    <h2>User Form</h2>
+<div class="row">
+    <div class="col-12">
+        <form method="post">
+            {% csrf_token %}
+            <div>
+            <label for="">Value 1:</label>
+            <br>
+            <input type="text" name="v1" class="form-control" value="{{v1}} " >
+            </div>
+            <div>
+                <br>
+            <label for="">Value 2:</label>
+            <br>
+            <input type="text" name="v2" class="form-control" value="{{v2}}" >
+            </div>
+            <div>
+                <br>
+                <button type="submit">Add</button>
+            </div>
+            <div>
+            <br>
+            Output: <br>
+            <input type="text" disabled value="{{output}}" class="form-control">
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

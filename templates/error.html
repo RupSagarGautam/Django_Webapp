@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Error Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #afc6f9; /* light cyan blue background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #004d40;
+    }
+
+    .error-box {
+      text-align: center;
+      padding: 2rem 3rem;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .error-code {
+      font-size: 5rem;
+      font-weight: bold;
+      color: #2563eb;
+    }
+
+    .error-message {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .error-description {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      background-color: #1d63e4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #08176bbc;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-box">
+    <div class="error-code">404.{{output}}</div>
+    
+    <div class="error-message">Oops! Page not found.</div>
+    <div class="error-description">
+      The page you are looking for doesn't exist or has been moved.
+    </div>
+    <button onclick="goBack()">Go Back</button>
+  </div>
+
+  <script>
+    function goBack() {
+      if (document.referrer) {
+        window.history.back();
+      } else {
+        window.location.href = "/";
+      }
+    }
+  </script>
+</body>
+</html>
