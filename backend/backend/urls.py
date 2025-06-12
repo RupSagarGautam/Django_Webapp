@@ -29,6 +29,7 @@ urlpatterns = [
     path('opportunities/', views.opportunities, name='opportunities'),
     path('profile/', views.profile, name='profile'),
     path('research/', views.research, name='research'),
-
+    path('user-Form/', views.userForm, name='userForm'),
+    path('error/', views.error, name='error'),
     
 ]

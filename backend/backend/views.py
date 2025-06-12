@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 def homePage(request):
@@ -22,5 +22,26 @@ def profile(request):
 def research(request):
     return render(request, 'research.html')
 
+def userForm(request):
+    v3=0
+    data={}
+    try:
+        v1 = int(request.POST.get('v1'))
+        v2 = int(request.POST.get('v2'))
+        v3 = v1 + v2
+        data={
+            'v1': v1,
+            'v2': v2,
+            'output': v3
+        }
+        url= "/error/?output={}".format(v3)
+        return HttpResponseRedirect(url)
+    except:
+        pass
+        
+    return render(request, 'userForm.html',data)
 
-
+def error(request):
+    if request.method=="GET":
+        output = request.GET.get('output')
+    return render(request, 'error.html',{'output':output})
